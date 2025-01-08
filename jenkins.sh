@@ -18,7 +18,7 @@ systemctl status jenkins.service
 
 #Ubuntu
 #STEP-1: INSTALLING GIT JAVA MAVEN 
-yum install git maven -y
+apt-get install git maven -y
 
 #STEP-2: GETTING THE REPO (jenkins.io --> download -- > Debian) 
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
