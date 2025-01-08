@@ -18,6 +18,7 @@ systemctl status jenkins.service
 
 #Ubuntu
 #STEP-1: INSTALLING GIT JAVA MAVEN 
+sudo apt update 
 apt-get install git maven -y
 
 #STEP-2: GETTING THE REPO (jenkins.io --> download -- > Debian) 
