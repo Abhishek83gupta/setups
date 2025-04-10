@@ -14,7 +14,7 @@ export M2_HOME=/root/apache-maven-3.9.9
 export PATH=$PATH:$M2_HOME/bin    
 
 source ~/.bash_profile  # to apply the changes without restarting
-
+mvn --version
 
 #OR
 
@@ -34,3 +34,4 @@ export M2_HOME=/root/apache-maven-3.9.9
 env
 export PATH=$PATH:$M2_HOME/bin
 env
+mvn --version
