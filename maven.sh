@@ -1,6 +1,6 @@
 # Install java 
 yum update -y
-yum install java-21-amazon-corretto-devel -y
+yum install java-17-amazon-corretto-devel -y
 
 # Maven Installation
 wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
