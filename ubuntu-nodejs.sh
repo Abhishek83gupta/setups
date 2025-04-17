@@ -15,6 +15,9 @@ nvm -v
 # Install the latest LTS version of Node.js
 nvm install --lts
 
+# Reload shell
+source ~/.bashrc
+
 # Verify Node.js and npm installation
 echo "Node version: $(node -v)"
 echo "npm version: $(npm -v)"
