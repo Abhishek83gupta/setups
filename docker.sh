@@ -4,8 +4,12 @@ set -e                   #Exit the script immediately if any command fails (retu
 # Update system packages 
 sudo yum update -y
 
-# Start Docker service
+# Install Docker from the default system repository
+# Note: This may not install the latest Docker version
 sudo yum install docker -y
+
+# Start Docker service
+sudo systemctl start docker 
 
 # Enable Docker to start on boot
 sudo systemctl enable docker
