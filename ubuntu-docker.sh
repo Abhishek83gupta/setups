@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e    
 
 # Update system package
 sudo apt update -y
