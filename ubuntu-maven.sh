@@ -4,8 +4,8 @@
 hostnamectl set-hostname maven-setup
 
 # Update system and install Java 17 (OpenJDK)
-apt update -y
-apt install -y openjdk-17-jdk wget tar
+apt-get update -y
+apt-get install -y openjdk-17-jdk wget tar
 
 # Download and extract Maven
 wget https://archive.apache.org/dist/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
