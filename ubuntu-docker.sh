@@ -2,10 +2,10 @@
 set -e    
 
 # Update system package
-sudo apt update -y
+sudo apt-get update -y
 
 # Install dependencies
-sudo apt install ca-certificates curl gnupg lsb-release -y
+sudo apt-get install ca-certificates curl gnupg lsb-release -y
 
 # Add Docker’s Official GPG key
 sudo mkdir -p /etc/apt/keyrings
@@ -15,10 +15,10 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 # Update again
-sudo apt update -y
+sudo apt-get update -y
 
 # Install Docker Engine 
-sudo apt install -y docker-ce docker-ce-cli containerd.io
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
 # Start Docker service
 sudo systemctl start docker
@@ -37,7 +37,7 @@ docker ps -a                      # container will run & stop immediately bcz no
 
 
 
-#OR 
+# OR 
 
 
 
@@ -46,10 +46,10 @@ docker ps -a                      # container will run & stop immediately bcz no
 set -e                   
 
 # Update system packages 
-sudo apt update -y
+sudo apt-get update -y
 
 # Install Docker from the default system repository
-sudo apt install docker.io -y
+sudo apt-get install docker.io -y
 
 # Start Docker service
 sudo systemctl start docker 
