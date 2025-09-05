@@ -49,7 +49,7 @@ set -e
 sudo apt update -y
 
 # Install Docker from the default system repository
-sudo yum install docker.io -y
+sudo apt install docker.io -y
 
 # Start Docker service
 sudo systemctl start docker 
