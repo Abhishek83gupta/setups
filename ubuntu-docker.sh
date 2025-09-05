@@ -33,3 +33,36 @@ docker --version
 docker run hello-world
 # To see all containers
 docker ps -a                      # container will run & stop immediately bcz nothing to do
+
+
+
+
+#OR 
+
+
+
+
+#!/bin/bash
+set -e                   
+
+# Update system packages 
+sudo apt update -y
+
+# Install Docker from the default system repository
+sudo yum install docker.io -y
+
+# Start Docker service
+sudo systemctl start docker 
+
+# Enable Docker to start on boot
+sudo systemctl enable docker
+sudo systemctl status docker
+
+# Verify Docker version
+docker --version
+
+# Run test container (pulls from Docker Hub if needed)
+docker run hello-world
+
+# List all containers 
+docker ps -a
