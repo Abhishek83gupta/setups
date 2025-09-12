@@ -20,6 +20,6 @@ sudo apt-get install jenkins
 update-alternatives --config java
 
 #STEP-4: RESTARTING JENKINS (when we download service it will on stopped state)
-systemctl start jenkins.service
-systemctl status jenkins.service
-systemctl enable jenkins.service
+systemctl start jenkins
+systemctl status jenkins
+systemctl enable jenkins
