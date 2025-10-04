@@ -14,6 +14,9 @@ sudo systemctl start docker
 # Enable Docker to start on boot
 sudo systemctl enable docker
 
+# Check Docker status
+sudo systemctl status docker 
+
 # Verify Docker version
 docker --version
 
