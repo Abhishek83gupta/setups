@@ -16,8 +16,8 @@ echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 
 #STEP-3: DOWNLOAD JENKINS
-sudo apt-get update
-sudo apt-get install jenkins
+sudo apt-get update -y
+sudo apt-get install jenkins -y
 
 #STEP-4: RESTARTING JENKINS (when we download service it will on stopped state)
 systemctl start jenkins
