@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e 
 
-#STEP-1: DOWNLOAD JAVA17 AND JENKINS
+#STEP-1: DOWNLOAD JAVA (Jenkins dependency)
 sudo apt-get update -y 
 sudo apt-get install fontconfig openjdk-21-jre
 java -version
