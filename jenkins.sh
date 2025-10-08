@@ -1,16 +1,20 @@
 #!/bin/bash
 set -e 
 
-#STEP-1: INSTALLING GIT JAVA MAVEN 
-yum install git maven -y
+#STEP-1: DOWNLOAD JAVA (Jenkins dependency)
+sudo yum update -y 
+sudo yum install fontconfig java-21-openjdk
+java -version
+# update-alternatives --config java
 
 #STEP-2: GETTING THE REPO (jenkins.io --> download -- > redhat)
-sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 
-#STEP-3: DOWNLOAD JAVA17 AND JENKINS
-yum install jenkins java-17-amazon-corretto -y
-update-alternatives --config java
+#STEP-3: DOWNLOAD JENKINS
+sudo yum update -y
+sudo yum install jenkins
 
 #STEP-4: RESTARTING JENKINS (when we download service it will on stopped state)
 systemctl start jenkins.service
