@@ -3,7 +3,7 @@ set -e
 
 #STEP-1: DOWNLOAD JAVA (Jenkins dependency)
 sudo yum update -y 
-sudo yum install fontconfig java-21-openjdk
+sudo yum install java-17-amazon-corretto
 java -version
 # update-alternatives --config java
 
@@ -14,7 +14,7 @@ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 
 #STEP-3: DOWNLOAD JENKINS
 sudo yum update -y
-sudo yum install jenkins
+sudo yum install jenkins -y
 
 #STEP-4: RESTARTING JENKINS (when we download service it will on stopped state)
 systemctl start jenkins.service
