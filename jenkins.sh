@@ -4,7 +4,7 @@ set -e
 #STEP-1: DOWNLOAD JAVA (Jenkins dependency)
 sudo yum update -y 
 sudo yum install java-17-amazon-corretto
-java -version
+java --version
 # update-alternatives --config java
 
 #STEP-2: GETTING THE REPO (jenkins.io --> download -- > redhat)
