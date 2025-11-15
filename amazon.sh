@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e 
 
-sudo yum update -y
 sudo -i
+yum update -y
 yum install httpd git -y
 systemctl start httpd
 systemctl status httpd
